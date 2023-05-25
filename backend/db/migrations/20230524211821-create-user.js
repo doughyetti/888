@@ -25,11 +25,13 @@ module.exports = {
       },
       email: {
         type: Sequelize.STRING(256),
-        allowNull: false
+        allowNull: false,
+        unique: true
       },
       phoneNumber: {
         type: Sequelize.STRING(12),
-        allowNull: false
+        allowNull: false,
+        unique: true
       },
       hashedPassword: {
         type: Sequelize.STRING.BINARY
