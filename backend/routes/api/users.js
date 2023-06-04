@@ -4,7 +4,7 @@ const { check } = require('express-validator');
 const { handleValidationErrors } = require('../../utils/validation');
 
 const { setTokenCookie, requireAuth } = require('../../utils/auth');
-const { User } = require('../../db/models');
+const { Customer } = require('../../db/models');
 
 const router = express.Router();
 
@@ -39,7 +39,7 @@ router.post(
   async (req, res) => {
     const { firstName, lastName, email, password, phoneNumber } = req.body;
     const hashedPassword = bcrypt.hashSync(password);
-    const user = await User.create({ firstName, lastName, email, hashedPassword, phoneNumber });
+    const user = await Customer.create({ firstName, lastName, email, hashedPassword, phoneNumber });
 
     const safeUser = {
       id: user.id,
