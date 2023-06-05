@@ -36,11 +36,11 @@ function Navigation({ isLoaded }){
         <div className="nav-menu-container">
           <nav className="nav-list">
             <ul>
-              <li className="menu-item">About</li>
-              <li className="menu-item">Menu</li>
-              <li className="menu-item">Reviews</li>
-              <li className="menu-item">Reservations</li>
-              <li id="order" className="menu-item">Order Online</li>
+              <li className="menu-item">ABOUT</li>
+              <li className="menu-item">MENU</li>
+              <li className="menu-item">REVIEWS</li>
+              <li className="menu-item">RESERVATIONS</li>
+              <li id="order" className="menu-item">ORDER ONLINE</li>
               {isLoaded && sessionLinks}
             </ul>
           </nav>

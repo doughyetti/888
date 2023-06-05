@@ -1,20 +1,28 @@
-body {
-  font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+* {
+  box-sizing: border-box;
 }
 
-h1 {
+body {
+  font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+  background-color: black;
+  width: 100vw;
+  height: 100vh;
+  margin: 0;
+}
+
+#contact-button {
   color: white;
   margin: 0;
 }
 
-h1:hover {
+#contact-button:hover {
   color: black;
 }
 
 .contact-button {
   position: absolute;
   bottom: 75px;
-  font-size: 15px;
+  font-size: 12px;
   padding: 10px 20px;
   border: 2px solid white;
   border-radius: 6px;
