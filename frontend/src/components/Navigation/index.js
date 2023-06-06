@@ -32,9 +32,9 @@ function Navigation({ isLoaded }){
     document.getElementById("about-section").scrollIntoView({ behavior: "smooth"});
   };
 
-  // const handleMenuClick = () => {
-  //   document.getElementById("about-section").scrollIntoView({ behavior: "smooth"});
-  // };
+  const handleMenuClick = () => {
+    document.getElementById("menu-section").scrollIntoView({ behavior: "smooth"});
+  };
 
   // const handleRezzyClick = () => {
   //   document.getElementById("about-section").scrollIntoView({ behavior: "smooth"});
@@ -53,10 +53,10 @@ function Navigation({ isLoaded }){
           <nav className="nav-list">
             <ul>
               <li className="menu-item" onClick={handleAboutClick}>ABOUT</li>
-              <li className="menu-item">MENU</li>
+              <li className="menu-item" onClick={handleMenuClick} >MENU</li>
               <li className="menu-item">REVIEWS</li>
               <li className="menu-item">RESERVATIONS</li>
-              <li id="order" className="menu-item">ORDER ONLINE</li>
+              <li id="order" className="menu-item" onClick={handleMenuClick} >ORDER ONLINE</li>
               {isLoaded && sessionLinks}
             </ul>
           </nav>

@@ -49,6 +49,12 @@
 .about-header h1 {
   font-size: 45px;
   font-weight: 300;
+  margin: 0;
+  padding-top: 15px;
+}
+
+.about-container p {
+  padding: 0 35px;
 }
 
 @media (min-aspect-ratio: 16/9) {
