@@ -4,9 +4,11 @@ import About from "../About";
 import "./MainPage.css"
 
 const MainPage = () => {
+  // const ref = useRef();
+
   return (
     <Parallax className="main-parallax-layer" pages={2}>
-      <ParallaxLayer className="parallax-layer layer-0" offset={0} speed={0} strength={300}>
+      <ParallaxLayer id="home-section" className="parallax-layer layer-0" offset={0} speed={1} strength={800}>
         <div>
           <video autoPlay loop muted className="bg_video">
             <source src={backgroundVideo} type="video/mp4" />
@@ -16,7 +18,7 @@ const MainPage = () => {
           <h1 id="contact-button">CONTACT US</h1>
         </div>
       </ParallaxLayer>
-      <ParallaxLayer className="parallax-layer layer-1" offset={1} speed={1} strength={300} factor={2}>
+      <ParallaxLayer id="about-section" className="parallax-layer layer-1" offset={1} speed={1} strength={300}>
         <About />
       </ParallaxLayer>
     </Parallax>

@@ -22,7 +22,23 @@ function Navigation({ isLoaded }){
         <NavLink to="/signup">Sign Up</NavLink>
       </li>
     );
-  }
+  };
+
+  const handleHomeClick = () => {
+    document.getElementById("home-section").scrollIntoView({ behavior: "smooth"});
+  };
+
+  const handleAboutClick = () => {
+    document.getElementById("about-section").scrollIntoView({ behavior: "smooth"});
+  };
+
+  // const handleMenuClick = () => {
+  //   document.getElementById("about-section").scrollIntoView({ behavior: "smooth"});
+  // };
+
+  // const handleRezzyClick = () => {
+  //   document.getElementById("about-section").scrollIntoView({ behavior: "smooth"});
+  // };
 
   return (
     <div className="main-nav-container">
@@ -30,13 +46,13 @@ function Navigation({ isLoaded }){
       <div className="sub-nav-container">
 
         <div className="logo-container">
-          <Link className="logo" to="/"></Link>
+          <Link className="logo" onClick={handleHomeClick} to="/"></Link>
         </div>
 
         <div className="nav-menu-container">
           <nav className="nav-list">
             <ul>
-              <li className="menu-item">ABOUT</li>
+              <li className="menu-item" onClick={handleAboutClick}>ABOUT</li>
               <li className="menu-item">MENU</li>
               <li className="menu-item">REVIEWS</li>
               <li className="menu-item">RESERVATIONS</li>
