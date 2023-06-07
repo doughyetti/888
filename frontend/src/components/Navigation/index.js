@@ -29,11 +29,11 @@ function Navigation({ isLoaded }){
   };
 
   const handleAboutClick = () => {
-    document.getElementById("about-section").scrollIntoView({ behavior: "smooth"});
+    document.getElementById("about-section").scrollIntoView({ behavior: "smooth", block: "start" });
   };
 
   const handleMenuClick = () => {
-    document.getElementById("menu-section").scrollIntoView({ behavior: "smooth"});
+    document.getElementById("menu-section").scrollIntoView({ behavior: "smooth", block: "start"});
   };
 
   // const handleRezzyClick = () => {
