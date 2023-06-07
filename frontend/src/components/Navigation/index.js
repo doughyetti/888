@@ -45,8 +45,9 @@ function Navigation({ isLoaded }){
 
       <div className="sub-nav-container">
 
-        <div className="logo-container">
-          <Link className="logo" onClick={handleHomeClick} to="/"></Link>
+        <div className="logo-container" onClick={handleHomeClick}>
+          <Link className="logo" to="/"></Link>
+          <h1>Pan Asian Restaurant</h1>
         </div>
 
         <div className="nav-menu-container">

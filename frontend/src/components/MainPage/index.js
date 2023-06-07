@@ -3,6 +3,7 @@ import { useDispatch } from "react-redux";
 import { Parallax, ParallaxLayer } from "@react-spring/parallax";
 import backgroundVideo from "../../vids/bg.mp4"
 import About from "../About";
+import Menu from "../Menu";
 import { getMenuThunk } from "../../store/menu";
 import "./MainPage.css"
 
@@ -15,7 +16,7 @@ const MainPage = () => {
 
   return (
     <Parallax className="main-parallax-layer" pages={3}>
-      <ParallaxLayer id="home-section" className="parallax-layer layer-0" offset={0} speed={1} strength={800}>
+      <ParallaxLayer id="home-section" className="parallax-layer" offset={0} speed={.5} strength={800}>
         <div>
           <video autoPlay loop muted className="bg_video">
             <source src={backgroundVideo} type="video/mp4" />
@@ -26,12 +27,12 @@ const MainPage = () => {
         </div>
       </ParallaxLayer>
 
-      <ParallaxLayer id="about-section" className="parallax-layer layer-1" offset={1} speed={1} strength={800}>
+      <ParallaxLayer id="about-section" className="parallax-layer" offset={1} speed={.5} strength={800}>
         <About />
       </ParallaxLayer>
 
-      <ParallaxLayer id="menu-section" className="parallax-layer layer-1" offset={2} speed={1} strength={800}>
-        
+      <ParallaxLayer id="menu-section" className="parallax-layer" offset={2} speed={.5} strength={800}>
+        <Menu />
       </ParallaxLayer>
     </Parallax>
   );

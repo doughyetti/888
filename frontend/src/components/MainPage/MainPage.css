@@ -62,7 +62,7 @@ body {
   left: 0;
   right: 0;
   z-index: -1;
-};
+}
 
 @media (min-aspect-ratio: 16/9) {
   .bg_video {
