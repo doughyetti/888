@@ -18,6 +18,12 @@ module.exports = {
       },
       {
         menuId: 1,
+        name: "Vietnamese-style Egg Rolls",
+        description: "Pork, crispy skin, side of lime fish sauce.",
+        price: 6.25
+      },
+      {
+        menuId: 1,
         name: "Steam Dumplings",
         description: "(8 pieces), ground pork, scallions, cilantro, ginger.",
         price: 7.25
@@ -33,6 +39,12 @@ module.exports = {
         name: "Pho Dac Biet",
         description: "Pho with combination of rare flank steak slices, beef tripe, braised brisket, meat ball, & soft tendon.",
         price: 13.00
+      },
+      {
+        menuId: 2,
+        name: "Pho Do Bien",
+        description: "Pho with shrimp, fish balls, squid, scallop, and krab.",
+        price: 12.50
       },
       {
         menuId: 2,
@@ -63,6 +75,18 @@ module.exports = {
         name: "Thai-style Stir-fried Seafood w/ Vegetables",
         description: "Stir-fried shrimp, scallop, squid fish balls, and crab with thai basil, red & green bell peppers, broccoli, shiitake mushrooms, asparagus, carrot, and snow peas in chef's spicy thai sauce.",
         price: 17.00
+      },
+      {
+        menuId: 3,
+        name: "Sizzling Red Snapper",
+        description: "Crispy red snapper fillet covered in chef's special tangy sauce with tangerine, red & green bell peppers, thai basil, and white mushroom.",
+        price: 17.25
+      },
+      {
+        menuId: 4,
+        name: "Hot Jasmine Tea",
+        description: "Fresh jasmine tea leaves brewed to perfection.",
+        price: 5.25
       },
       {
         menuId: 4,

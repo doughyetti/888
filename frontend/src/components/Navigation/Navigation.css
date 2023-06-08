@@ -9,8 +9,35 @@
   color: #fff;
 }
 
+.menu-item-cart {
+  text-decoration: none;
+  list-style: none;
+  display: flex;
+  justify-content: space-between;
+  margin-right: 70px;
+  color: #fff;
+}
+
+.cart-icon {
+  font-size: 1.6rem;
+  background-color: transparent;
+  border: none;
+  color: rgb(255, 255, 255);
+  display: inline-block;
+}
+
+.cart-badge {
+  font-size: .8rem;
+}
+
+.cart-icon:hover {
+  cursor: pointer;
+  color: red;
+  transition: .5s;
+}
+
 .user-icon {
-  font-size: 20px;
+  font-size: 1.7rem;
   background-color: transparent;
   border: none;
   color: #fff;

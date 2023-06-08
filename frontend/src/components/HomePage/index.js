@@ -1,5 +1,5 @@
 import { Parallax, Background } from "react-parallax"
-import { useDispatch } from "react-redux";
+// import { useDispatch } from "react-redux";
 import homeBg from "../../vids/bg.mp4";
 import "./HomePage.css"
 

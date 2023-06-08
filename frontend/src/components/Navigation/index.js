@@ -1,12 +1,15 @@
 import React from 'react';
 import { NavLink, Link } from 'react-router-dom';
-import { useSelector, useDispatch } from 'react-redux';
+import { useDispatch, useSelector } from 'react-redux';
 import ProfileButton from './ProfileButton';
-// import './Navigation.css';
+import { cartUiActions } from "../../store/cartUiSlice";
+import './Navigation.css';
 
 function Navigation({ isLoaded }){
-  const sessionUser = useSelector(state => state.session.user);
   const dispatch = useDispatch();
+
+  const sessionUser = useSelector(state => state.session.user);
+  const totalQuantity = useSelector(state => state.cart.totalQuantity);
 
   let sessionLinks;
   if (sessionUser) {
@@ -22,6 +25,10 @@ function Navigation({ isLoaded }){
         <NavLink to="/signup">Sign Up</NavLink>
       </li>
     );
+  };
+
+  const toggleCart = () => {
+    dispatch(cartUiActions.toggle());
   };
 
   const handleHomeClick = () => {
@@ -58,6 +65,10 @@ function Navigation({ isLoaded }){
               <li className="menu-item">REVIEWS</li>
               <li className="menu-item">RESERVATIONS</li>
               <li id="order" className="menu-item" onClick={handleMenuClick} >ORDER ONLINE</li>
+              <li className="menu-item-cart">
+                <button className="cart-icon"><i className="fa-solid fa-basket-shopping" onClick={() => toggleCart()}></i></button>
+                <span className="cart-badge">{totalQuantity}</span>
+              </li>
               {isLoaded && sessionLinks}
             </ul>
           </nav>

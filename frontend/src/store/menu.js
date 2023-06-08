@@ -25,7 +25,7 @@ const menusReducer = (state = initialState, action) => {
 
   switch (action.type) {
     case GET_MENUS: {
-      return { ...state, ...action.menus };
+      return { ...state, ...action.menus.Menus };
     }
     default:
       return state;
