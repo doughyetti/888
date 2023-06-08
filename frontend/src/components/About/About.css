@@ -1,0 +1,64 @@
+.layer-1-bg {
+  background: url(https://888capstone.s3.us-east-2.amazonaws.com/about.jpeg) no-repeat center center fixed;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+  min-height: 100%;
+  min-width: 100%;
+  filter: blur(4px);
+  /* Set up proportionate scaling */
+  width: 100%;
+  height: 100vh;
+
+  /* Set up positioning */
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: -1;
+}
+
+.about-container {
+  display: inline-block;
+  align-items: center;
+  justify-content: space-between;
+  position: absolute;
+  right: 150px;
+  top: 250px;
+  width: 40vw;
+  height: 50vh;
+  background-color: rgb(0,0,0, 0.1);
+  border-radius: 50px;
+  color: #fff;
+  z-index: 1;
+}
+
+.about-header {
+  display: flex;
+  justify-content: center;
+}
+
+.about-header h1 {
+  font-size: 45px;
+  font-weight: 300;
+  margin: 0;
+  padding-top: 15px;
+}
+
+.about-container p {
+  padding: 0 35px;
+}
+
+@media (min-aspect-ratio: 16/9) {
+  .layer-1-bg {
+    width: 100vw;
+    height: auto;
+  }
+};
+
+@media (max-aspect-ratio: 16/9) {
+  .layer-1-bg {
+    width: auto;
+    height: 100vh;
+  }
+};

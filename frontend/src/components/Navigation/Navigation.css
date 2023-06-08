@@ -1,0 +1,156 @@
+.hidden {
+  visibility: hidden;
+  overflow: hidden;
+}
+
+.menu-icon {
+  font-size: 20px;
+  list-style: none;
+  color: #fff;
+}
+
+.menu-item-cart {
+  text-decoration: none;
+  list-style: none;
+  display: flex;
+  justify-content: space-between;
+  margin-right: 70px;
+  color: #fff;
+}
+
+.cart-icon {
+  font-size: 1.6rem;
+  background-color: transparent;
+  border: none;
+  color: rgb(255, 255, 255);
+  display: inline-block;
+}
+
+.cart-badge {
+  font-size: .8rem;
+}
+
+.cart-icon:hover {
+  cursor: pointer;
+  color: red;
+  transition: .5s;
+}
+
+.user-icon {
+  font-size: 1.7rem;
+  background-color: transparent;
+  border: none;
+  color: #fff;
+  display: inline-block;
+}
+
+.user-icon:hover {
+  cursor: pointer;
+  color: rgb(255, 0, 0, 0.7);
+  transition: .5s;
+}
+
+.profile-dropdown {
+  float: right;
+}
+
+.main-nav-container {
+  background: linear-gradient(0deg, rgba(0,0,0,0.1) 0%, rgba(0,0,0,0.4) 10%, rgba(0,0,0,0.7) 30%, rgba(0,0,0,0.9) 60%, rgba(0,0,0) 80%);
+  width: 100%;
+  height: 10vh;
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 99;
+}
+
+.sub-nav-container {
+  width: 80%;
+  height: 10vh;
+  display: flex;
+  align-items: center;
+  margin: 0 auto;
+}
+
+.logo-container {
+  display: flex;
+  align-items: center;
+  width: 100%;
+  height: 10vh;
+}
+
+.logo-container h1 {
+  display: flex;
+  color: #fff;
+  font-size: 2rem;
+  font-weight: 300;
+  padding-left: 10px;
+}
+
+.logo-container h1:hover {
+  cursor: pointer;
+}
+
+.logo {
+  background-image: url(https://888capstone.s3.us-east-2.amazonaws.com/logo-fotor-bg-remover-20230603175853.png);
+  background-repeat: no-repeat;
+  background-size: 5.5vw auto;
+  width: 5.5vw;
+  height: 8.5vh;
+}
+
+.nav-menu-container {
+  position: absolute;
+  right: 0;
+}
+
+.nav-list {
+  flex: 1;
+  text-align: right;
+}
+
+.nav-list ul {
+  display: flex;
+  align-items: center;
+}
+
+nav ul .menu-item {
+  text-decoration: none;
+  list-style: none;
+  font-size: 17px;
+  font-weight: 300;
+  display: flex;
+  justify-content: space-between;
+  margin-right: 70px;
+  color: #fff;
+}
+
+nav ul .menu-item:hover {
+  cursor: pointer;
+  border-bottom: 2px solid #fff;
+  padding-bottom: 3px;
+  transition: .25s;
+}
+
+#order {
+  border: 2px solid #fff;
+  padding: 7px 20px;
+  border-radius: 5px;
+}
+
+#order:hover {
+  --clr: #fff;
+  --outline: 2px solid var(--clr);
+  color: var(--clr);
+  outline: 1px solid #fff;
+  border: 2px solid #fff;
+  outline-offset: 6px;
+  transition: outline-offset 200ms ease;
+}
+
+@media (max-width: 1920px) {
+  nav ul .menu-item {
+    font-size: 14px;
+    margin-right: 40px;
+  }
+}

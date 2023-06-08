@@ -1,0 +1,6 @@
+{
+  "dependencies": {
+    "git-filter-repo": "^0.0.30",
+    "react-full-page": "^0.1.12"
+  }
+}
