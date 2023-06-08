@@ -68,20 +68,30 @@ const Menu = () => {
       <Container id="menu-section" className="main-container">
         <Row className="menu-container">
           <div className="menu-headers-container">
+
             <div className="menu-list">
               {menuArr.length && menuArr.map((menu) => (
                 <button key={menu.id} className={`filter-btn ${filter === menu.type ? "active-btn" : ""}`} onClick={() => setFilter(menu.type)}>{menu.type}</button>
               ))}
             </div>
+
+            <div className="menu-search">
+            </div>
+
           </div>
 
           <div className="items-list-container">
             {menuType && menuType.Items.map((item) => (
               <div className="items-list" key={item.id}>
-                <p>{item.name}</p>
-                <p>{item.description}</p>
-                <p>{item.price}</p>
-                <button className="add-cart-btn" onClick={() => addToCart(item)}><i className="fa-solid fa-cart-plus"></i></button>
+                <div className="item-title">
+                  <h2>{item.name}</h2>
+                  <h4>${item.price}</h4>
+                </div>
+
+                <div className="item-info">
+                  <p>{item.description}</p>
+                  <button className="add-cart-btn" onClick={() => addToCart(item)}><i className="fa-solid fa-cart-plus"></i></button>
+                </div>
               </div>
             ))}
           </div>

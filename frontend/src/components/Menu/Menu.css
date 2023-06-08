@@ -14,16 +14,16 @@
   width: 75vw;
   height: 70vh;
   background-color: rgb(0,0,0, 0.8);
-  border-radius: 25px;
+  border-radius: 100px;
   display: flex;
   align-items: center;
   flex-direction: column;
-  justify-content: flex-start;
+  margin-top: 100px;
 }
 
 .menu-headers-container {
   width: 40vw;
-  height: 15vh;
+  height: 25vh;
 }
 
 .menu-list {
@@ -56,16 +56,41 @@
 }
 
 .items-list-container {
+  display: grid;
+  gap: 20px;
+  grid-template-columns: repeat(3, 1fr);
   width: 80%;
-  height: 85%;
-  background-color: rgb(255, 255, 255, 0.5);
+  height: 75%;
+  /* margin-top: 25px; */
+}
+
+.items-list {
+  width: 15vw;
+  color: #fff;
+}
+
+.item-title,
+.item-info {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.item-title h2 {
+  font-weight: 800;
+}
+
+.item-info p {
+  font-size: 1.1rem;
+  width: 12vw;
 }
 
 .add-cart-btn {
-  font-size: 1.5rem;
+  font-size: 1.2rem;
   background: transparent;
   border: none;
-  color: rgb(255, 255, 255, 0.8);
+  color: rgb(255, 255, 255);
 }
 
 .add-cart-btn:hover {

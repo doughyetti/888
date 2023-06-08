@@ -21,7 +21,7 @@ export const getMenuThunk = () => async (dispatch) => {
 const initialState = {};
 
 const menusReducer = (state = initialState, action) => {
-  let newState = {};
+  // let newState = {};
 
   switch (action.type) {
     case GET_MENUS: {
