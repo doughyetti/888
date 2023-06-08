@@ -30,14 +30,16 @@
   height: 2rem;
   font-size: 1.4rem;
   font-weight: 600;
-  color: #fff;
-  background: black;
+  color: black;
   border-radius: 50%;
   padding: 5px 8px;
 }
 
 .cart-close span i:hover {
   cursor: pointer;
+  color: #fff;
+  background: black;
+  transition: .5s;
 }
 
 .cart-item-list {
