@@ -25,7 +25,11 @@ const Carts = () => {
         </div>
 
         <div className="cart-item-list">
-          {!cartProducts.length ? <h4 className="empty-cart-message">{`No items added to the cart! Go buy something :]`}</h4>
+          {!cartProducts.length ?
+            <div className="empty-message-container">
+              <h4 className="empty-cart-message">{`No items added to the cart! Go buy something :]`}</h4>
+              <span className="poo"><i class="fa-solid fa-poo"></i></span>
+            </div>
             : cartProducts.map((item, idx) => (
               <CartItem item={item} key={idx} />
             ))
