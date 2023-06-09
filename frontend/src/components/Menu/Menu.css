@@ -23,13 +23,17 @@
 
 .menu-headers-container {
   width: 40vw;
-  height: 25vh;
+  height: 20vh;
+  /* display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center; */
 }
 
 .menu-list {
-  display: flex;
-  flex-direction: row;
-  justify-content: space-between;
+  display: flex !important;
+  flex-direction: row !important;
+  justify-content: space-between !important;
   margin-top: 35px;
 }
 
@@ -45,13 +49,13 @@
 
 .filter-btn:hover {
   cursor: pointer;
-  background-color: rgb(255, 255, 255, 0.8);
+  background-color: rgb(255, 255, 255);
   color: black;
   transition: 0.5s;
 }
 
 .active-btn {
-  background-color: rgb(255, 255, 255, 0.8);
+  background-color: rgb(255, 255, 255);
   color: black;
 }
 
@@ -97,4 +101,114 @@
   cursor: pointer;
   color: red;
   transition: .7s;
+}
+
+/* SEARCH BAR */
+
+.search-container {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  width: 100%;
+  height: 8vh;
+  margin-top: 30px;
+}
+
+.search-bar {
+  background-color: rgba(255, 255, 255, 0.1);
+  margin: auto 0px;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  width: 20vw;
+  height: 4vh;
+  border-radius: 50px;
+}
+
+.search-bar>input {
+  width: 100%;
+  height: 100%;
+  font-size: 1.3rem;
+  border: none;
+  border-radius: 50px;
+  background-color: rgba(255, 255, 255, 0.1);
+  padding-left: 20px;
+  padding-top: 3px;
+  transition-property: background-color;
+  transition-duration: .5s;
+  -webkit-transition-duration: .3s;
+}
+
+.search-bar>input:hover {
+  background-color: rgba(255, 255, 255, 0.5);
+}
+
+.search-input::placeholder {
+  color: rgba(255, 255, 255);
+  font-size: 1.3rem;
+}
+
+.search-bar>input:focus {
+  background-color: #fff;
+  border: none;
+  outline: none;
+  color: black;
+}
+
+#search-icon {
+  font-size: 1.3rem;
+  position: relative;
+  right: 35px;
+  color: rgba(255, 255, 255);
+  margin: auto 0px;
+}
+
+.search-results {
+  position: absolute;
+  top: 440px;
+  left: 1015px;
+  width: 20vw;
+  background: #fff;
+  border-radius: 25px;
+  overflow-y: scroll;
+  z-index: 69;
+}
+
+.search-results .hidden {
+  height: 50vh;
+}
+
+.search-results-box {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  color: black;
+  z-index: 69;
+}
+
+.search-card {
+  font-size: 1.1rem;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  width: 70%;
+  height: 100px;
+}
+
+.search-card span {
+  padding: 0 20px;
+}
+
+.search-card-bar {
+  width: 100%;
+  height: 1px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.search-card:hover {
+  cursor: pointer;
 }
