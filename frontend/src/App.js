@@ -7,8 +7,6 @@ import HomePage from "./components/HomePage";
 import About from "./components/About";
 import Menu from "./components/Menu";
 import Reviews from "./components/Reviews";
-// import LoginFormPage from "./components/LoginFormPage";
-// import SignupFormPage from "./components/SignupFormPage";
 import * as sessionActions from "./store/session";
 
 function App() {
