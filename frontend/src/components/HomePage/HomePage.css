@@ -4,22 +4,17 @@
   height: 100vh;
 }
 
-#contact-button {
-  color: white;
-  margin: 0;
-}
-
-#contact-button:hover {
-  color: black;
-}
-
-#home-section {
-  justify-content: flex-end;
+.about-content {
+  display: flex;
   flex-direction: column;
-  padding-bottom: 75px;
+  justify-content: center;
+  align-items: center;
 }
 
 .contact-button {
+  position: absolute;
+  bottom: 150px;
+  width: 7.5vw;
   font-size: 11px;
   padding: 10px 20px;
   border: 2px solid white;
@@ -35,6 +30,15 @@
   cursor: pointer;
   background-color: #fff;
   transition: 1s;
+}
+
+#contact-button {
+  color: white;
+  margin: 0;
+}
+
+#contact-button:hover {
+  color: black;
 }
 
 @media (min-aspect-ratio: 16/9) {

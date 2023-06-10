@@ -43,9 +43,9 @@ function Navigation({ isLoaded }){
     document.getElementById("menu-section").scrollIntoView({ behavior: "smooth", block: "start"});
   };
 
-  // const handleRezzyClick = () => {
-  //   document.getElementById("about-section").scrollIntoView({ behavior: "smooth"});
-  // };
+  const handleReviewsClick = () => {
+    document.getElementById("reviews-section").scrollIntoView({ behavior: "smooth"});
+  };
 
   return (
     <div className="main-nav-container">
@@ -62,11 +62,11 @@ function Navigation({ isLoaded }){
             <ul>
               <li className="menu-item" onClick={handleAboutClick}>ABOUT</li>
               <li className="menu-item" onClick={handleMenuClick} >MENU</li>
-              <li className="menu-item">REVIEWS</li>
+              <li className="menu-item" onClick={handleReviewsClick}>REVIEWS</li>
               <li className="menu-item">RESERVATIONS</li>
               <li id="order" className="menu-item" onClick={handleMenuClick} >ORDER ONLINE</li>
               <li className="menu-item-cart">
-                <button className="cart-icon"><i className="fa-solid fa-basket-shopping" onClick={() => toggleCart()}></i></button>
+                <button className="cart-icon"><i className="fa-solid fa-basket-shopping" onClick={toggleCart}></i></button>
                 <span className="cart-badge">{totalQuantity}</span>
               </li>
               {isLoaded && sessionLinks}
