@@ -1,12 +1,14 @@
 import { Parallax } from "react-parallax"
 import { Row, Col } from "reactstrap";
-import { useEffect, useState } from "react";
+import { useEffect } from "react";
 import { useDispatch, useSelector } from "react-redux";
 import { getReviewsThunk } from "../../store/review";
 import Slider from "react-slick";
+import OpenReviewsModalBtn from "./ReviewsOpenModalBtn.js";
+import ReviewModal from "./ReviewsModal";
 import "./Reviews.css"
 import "./slick.css";
-// import "./slick-theme.css";
+import OpenModalButton from "../OpenModalButton";
 
 const Reviews = () => {
   const dispatch = useDispatch();
@@ -52,7 +54,10 @@ const Reviews = () => {
               ))}
             </Slider>
 
-            <span className="new-review-btn">Leave a review!</span>
+            <OpenReviewsModalBtn
+              buttonText="Leave a review!"
+              modalComponent={<ReviewModal />}
+            />
 
           </Col>
 

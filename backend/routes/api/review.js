@@ -17,4 +17,14 @@ router.get('/', async (req, res) => {
   return res.json({ Reviews })
 });
 
+router.post('/', async (req, res) => {
+  const { description } = req.body;
+
+  const newReview = await Review.create({
+    customerId: req.user.id, description
+  });
+
+  return res.json({ newReview });
+});
+
 module.exports = router;

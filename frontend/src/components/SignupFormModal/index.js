@@ -46,7 +46,7 @@ function SignupFormModal() {
     <>
       <div className="signup-modal-container">
         <div className="signup-img">
-          <i class="fa-solid fa-user-astronaut"></i>
+          <i className="fa-solid fa-user-astronaut"></i>
         </div>
 
         {errors.firstName && <p>{errors.firstName}</p>}

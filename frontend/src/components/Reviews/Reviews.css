@@ -26,7 +26,6 @@
   align-items: center;
   justify-content: center;
   gap: 50px;
-  margin-bottom: 75px;
   color: #fff;
 }
 
@@ -84,9 +83,12 @@
 .new-review-btn {
   font-size: 1.3rem;
   font-weight: 500;
+  color: white;
+  background: transparent;
   border: 1px solid #fff;
   border-radius: 25px;
   padding: 10px 15px;
+  margin-top: 20px;
 }
 
 .new-review-btn:hover {
