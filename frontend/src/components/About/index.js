@@ -5,9 +5,6 @@ const About = () => {
   return (
     <Parallax className="parallax-layer" bgImage="https://888capstone.s3.us-east-2.amazonaws.com/about.jpeg" strength={800} blur={4}>
       <div id="about-section" className="main-container">
-        <div className="layer-1-bg">
-        </div>
-
         <div className="about-us-container">
           <div>
             <img className="about-us-img" src="https://888capstone.s3.us-east-2.amazonaws.com/aboutus.jpg" alt="about-us" />
