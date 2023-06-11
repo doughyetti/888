@@ -13,10 +13,15 @@ const HomePage = () => {
       </Background>
 
       <div id="home-section" className="main-container">
-        <div className="contact-button">
-          <h1 id="contact-button">CONTACT US</h1>
+        <div className="about-content">
+
+          <div className="contact-button">
+            <h1 id="contact-button">CONTACT US</h1>
+          </div>
+
         </div>
       </div>
+
     </Parallax>
   );
 };

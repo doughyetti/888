@@ -4,6 +4,7 @@ import { useEffect, useState } from "react";
 import { useDispatch, useSelector } from "react-redux";
 import { getMenuThunk } from "../../store/menu";
 import { cartActions } from "../../store/cart";
+import Search from "./Search";
 import menuBg from "../../vids/menu-bg.mp4"
 import "./Menu.css";
 
@@ -75,8 +76,7 @@ const Menu = () => {
               ))}
             </div>
 
-            <div className="menu-search">
-            </div>
+            <Search />
 
           </div>
 
