@@ -9,6 +9,7 @@ import "./Navigation.css"
 function ProfileButton({ user }) {
   const dispatch = useDispatch();
   const [showMenu, setShowMenu] = useState(false);
+  const [errors, setErrors] = useState([]);
   const ulRef = useRef();
 
   const openMenu = () => {
@@ -35,6 +36,18 @@ function ProfileButton({ user }) {
   const logout = (e) => {
     e.preventDefault();
     dispatch(sessionActions.logout());
+  };
+
+  const logInDemo = async (e) => {
+    e.preventDefault();
+    return dispatch(sessionActions.login({ credential:'demo@user.io', password:'password' }))
+      .then(setShowMenu(false))
+      .catch(async (res) => {
+        const data = await res.json();
+        if (data && data.errors) {
+          setErrors(data.errors);
+        }
+      });
   };
 
   const ulClassName = "profile-dropdown" + (showMenu ? "" : " hidden");
@@ -74,6 +87,11 @@ function ProfileButton({ user }) {
                   modalComponent={<SignupFormModal />}
                 />
               </li>
+
+              <button className="profile-modal-btn"
+                onClick={logInDemo}
+                >Demo User
+              </button>
 
             </div>
           </div>

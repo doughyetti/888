@@ -18,6 +18,11 @@ function SignupFormModal() {
 
   const handleSubmit = (e) => {
     e.preventDefault();
+    if (phoneNumber.length < 10 || phoneNumber.length > 10) {
+      return setErrors({
+        phoneNumber: "Phone number must be 10 characters long"
+      })
+    }
     if (password === confirmPassword) {
       setErrors({});
       return dispatch(

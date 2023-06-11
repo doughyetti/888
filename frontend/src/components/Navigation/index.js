@@ -11,28 +11,6 @@ function Navigation({ isLoaded }){
   const sessionUser = useSelector(state => state.session.user);
   const totalQuantity = useSelector(state => state.cart.totalQuantity);
 
-  // let sessionLinks;
-  // if (sessionUser) {
-  //   sessionLinks = (
-  //     <li className="menu-icon">
-  //       <ProfileButton user={sessionUser} />
-  //     </li>
-  //   );
-  // } else {
-  //   sessionLinks = (
-  //     <li>
-  //       <OpenModalButton
-  //         buttonText="Log In"
-  //         modalComponent={<LoginFormModal />}
-  //       />
-  //       <OpenModalButton
-  //         buttonText="Sign Up"
-  //         modalComponent={<SignupFormModal />}
-  //       />
-  //     </li>
-  //   );
-  // };
-
   const toggleCart = () => {
     dispatch(cartUiActions.toggle());
   };

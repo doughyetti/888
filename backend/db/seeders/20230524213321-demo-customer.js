@@ -16,7 +16,7 @@ module.exports = {
         firstName: 'Zuko',
         lastName: 'The Blue Spirit',
         email: 'demo@user.io',
-        phoneNumber: "123-456-7890",
+        phoneNumber: "1234567890",
         hashedPassword: bcrypt.hashSync('password')
       }
     ], {});

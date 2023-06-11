@@ -5,15 +5,18 @@ import { useDispatch, useSelector } from "react-redux";
 import { getReviewsThunk } from "../../store/review";
 import Slider from "react-slick";
 import OpenReviewsModalBtn from "./ReviewsOpenModalBtn.js";
-import ReviewModal from "./ReviewsModal";
+import NewReviewModal from "./NewReviewsModal";
+import UpdateReviewsModalBtn from "./UpdateReviewsOpenModalBtn";
+import UpdateReviewModal from "./UpdateReviewModal";
+import * as reviewActions from "../../store/review";
 import "./Reviews.css"
 import "./slick.css";
-import OpenModalButton from "../OpenModalButton";
 
 const Reviews = () => {
   const dispatch = useDispatch();
 
   const reviewsArr = useSelector(state => Object.values(state.review));
+  const user = useSelector(state =>state.session.user);
 
   useEffect(() => {
     dispatch(getReviewsThunk());
@@ -22,9 +25,16 @@ const Reviews = () => {
   var settings = {
     dots: true,
     infinite: true,
-    speed: 500,
+    speed: 200,
     slidesToShow: 1,
     slidesToScroll: 1
+  };
+
+  const handleDelete = (reviewId) => {
+    if (window.confirm('Are you sure you want to remove this group?')) {
+      dispatch(reviewActions.deleteReviewThunk(reviewId))
+    }
+    window.location.reload()
   };
 
   return (
@@ -36,17 +46,21 @@ const Reviews = () => {
 
             <Slider className="review-slider" {...settings}>
               {reviewsArr && reviewsArr.map((review) => (
-                <div>
+                <div key={review.id}>
                   <div className="single-review">
                     <p className="review-content">{review.description}</p>
 
                     <div className="customer-info">
                       <h6>{review.Customer.firstName} {review.Customer.lastName}</h6>
 
-                      <div className="customer-edit">
-                        <span className="customer-review-btn">Edit</span>
-                        <span className="customer-review-btn">Delete</span>
-                      </div>
+                      {user && <div className="customer-edit">
+                        <UpdateReviewsModalBtn
+                          buttonText="Edit"
+                          modalComponent={<UpdateReviewModal review={review}/>}
+                        />
+
+                        <button className="customer-review-btn" onClick={() => handleDelete(review.id)}>Delete</button>
+                      </div>}
                     </div>
 
                   </div>
@@ -54,10 +68,10 @@ const Reviews = () => {
               ))}
             </Slider>
 
-            <OpenReviewsModalBtn
+            {user && <OpenReviewsModalBtn
               buttonText="Leave a review!"
-              modalComponent={<ReviewModal />}
-            />
+              modalComponent={<NewReviewModal />}
+            />}
 
           </Col>
 
