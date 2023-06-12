@@ -1,10 +1,12 @@
 import React, { useState } from "react";
 import { useDispatch, useSelector } from "react-redux";
+import { useModal } from "../../context/Modal";
 import * as reviewActions from "../../store/review";
 import "./Reviews.css"
 
 const NewReviewModal = () => {
   const dispatch = useDispatch();
+  const { closeModal } = useModal();
   const user = useSelector(state => state.session)
 
   const [description, setDescription] = useState("");
@@ -16,7 +18,7 @@ const NewReviewModal = () => {
     const review =  { customerId: user.id, description }
 
     return dispatch(reviewActions.newReviewThunk(review))
-      .then(window.location.reload())
+      .then(closeModal())
       .catch(async (res) => {
       const data = await res.json();
 

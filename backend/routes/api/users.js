@@ -27,7 +27,7 @@ const validateSignup = [
     .withMessage('Password must be 6 characters or more.'),
   check('phoneNumber')
     .exists({ checkFalsy: true })
-    .isLength({ min: 12 })
+    .isLength({ min: 10, max: 10 })
     .withMessage('Please provide a valid phone number.'),
   handleValidationErrors
 ];
