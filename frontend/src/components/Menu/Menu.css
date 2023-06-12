@@ -166,12 +166,11 @@
 
 .search-results {
   position: absolute;
-  top: 440px;
+  top: 460px;
   left: 1015px;
   width: 20vw;
   background: #fff;
   border-radius: 25px;
-  overflow-y: scroll;
   z-index: 69;
 }
 
@@ -211,4 +210,29 @@
 
 .search-card:hover {
   cursor: pointer;
+}
+
+@media (max-width: 1920px) {
+  .filter-btn {
+    font-size: 1.5rem;
+  }
+  .item-title h2 {
+    font-size: 1.3rem;
+  }
+  .item-info p {
+    font-size: .9rem;
+  }
+  .search-bar>input {
+    font-size: 1rem;
+  }
+  .search-bar>input::placeholder {
+    font-size: 1rem;
+  }
+  #search-icon {
+    font-size: 1.1rem;
+  }
+  .search-results {
+    top: 400px;
+    left: 760px;
+  }
 }

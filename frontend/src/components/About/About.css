@@ -64,6 +64,21 @@
   padding: 0 35px;
 }
 
+@media (max-width: 1920px) {
+  .about-us-img {
+    width: 50%;
+    height: 50%;
+  }
+  .about-container {
+    position: absolute;
+    top: 15%;
+    height: 70vh;
+  }
+  .about-header h1{
+    font-size: 2.5rem;
+  }
+}
+
 @media (min-aspect-ratio: 16/9) {
   .layer-1-bg {
     width: 100vw;

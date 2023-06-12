@@ -162,3 +162,35 @@ textarea:focus {
   color: black;
   transition: 1s;
 }
+
+@media (max-width: 1920px) {
+  .review-title {
+    font-size: 2rem;
+  }
+  .review-content {
+    font-size: 1.1rem;
+  }
+  .single-review h6 {
+    font-size: 1.1rem;
+  }
+  .customer-review-btn {
+    font-size: 0.9rem;
+  }
+  .customer-edit {
+    position: relative;
+    right: 10px;
+  }
+  .new-review-btn {
+    font-size: 1.1rem;
+  }
+  .review-img-container {
+    font-size: 3rem;
+  }
+  textarea {
+    width: 450px;
+    height: 300px;
+  }
+  .review-form-btn {
+    font-size: 1.3rem;
+  }
+}

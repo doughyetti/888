@@ -99,7 +99,7 @@
 }
 
 .profile-modal-btn {
-  font-size: 1.1rem;
+  font-size: 0.9rem;
   background: transparent;
   border: none;
   width: 100%;
@@ -216,7 +216,22 @@ nav ul .menu-item:hover {
 
 @media (max-width: 1920px) {
   nav ul .menu-item {
-    font-size: 14px;
+    font-size: 15px;
     margin-right: 40px;
+  }
+  .logo-container h1 {
+    font-size: 1.6rem;
+  }
+  .profile-user-info {
+    width: 6vw;
+  }
+  .cart-item-name {
+    font-size: 1.1rem;
+  }
+  .cart-item-title-container span {
+    font-size: .9rem;
+  }
+  .cart-item-quantity-container {
+    width: 12vw;
   }
 }

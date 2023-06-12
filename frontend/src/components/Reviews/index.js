@@ -1,6 +1,6 @@
 import { Parallax } from "react-parallax"
 import { Row, Col } from "reactstrap";
-import { useEffect } from "react";
+import { useState, useEffect } from "react";
 import { useDispatch, useSelector } from "react-redux";
 import { getReviewsThunk } from "../../store/review";
 import { useModal } from "../../context/Modal";
@@ -55,7 +55,7 @@ const Reviews = () => {
                     <div className="customer-info">
                       <h6>{review.firstName} {review.lastName}</h6>
 
-                      {user && <div className="customer-edit">
+                      {user?.id === review.customerId && <div className="customer-edit">
                         <UpdateReviewsModalBtn
                           buttonText="Edit"
                           modalComponent={<UpdateReviewModal review={review}/>}
