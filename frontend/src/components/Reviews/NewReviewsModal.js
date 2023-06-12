@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import { useDispatch, useSelector } from "react-redux";
 import { useModal } from "../../context/Modal";
 import * as reviewActions from "../../store/review";
@@ -15,7 +15,7 @@ const NewReviewModal = () => {
   const handleSubmit = (e) => {
     e.preventDefault();
 
-    const review =  { customerId: user.id, description }
+    const review =  { customerId: user.id, firstName: user.firstName, lastName: user.lastName, description }
 
     return dispatch(reviewActions.newReviewThunk(review))
       .then(closeModal())

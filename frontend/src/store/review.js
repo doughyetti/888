@@ -87,7 +87,7 @@ const reviewsReducer = (state = initialState, action) => {
       return {...state, ...action.reviews.Reviews};
     }
     case NEW_REVIEW: {
-      return {...state, [action.review.id]: action.review};
+      return {...state, [action.review.newReview.id]: action.review.newReview};
     }
     case UPDATE_REVIEW: {
       return {...state, [action.review.id]: {...action.review}};

@@ -53,7 +53,7 @@ const Reviews = () => {
                     <p className="review-content">{review.description}</p>
 
                     <div className="customer-info">
-                      <h6>{review.Customer?.firstName} {review.Customer?.lastName}</h6>
+                      <h6>{review.firstName} {review.lastName}</h6>
 
                       {user && <div className="customer-edit">
                         <UpdateReviewsModalBtn
