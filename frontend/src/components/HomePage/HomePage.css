@@ -41,6 +41,12 @@
   color: black;
 }
 
+@media (max-width: 1920px) {
+  .contact-button {
+    width: 10vw;
+  }
+}
+
 @media (min-aspect-ratio: 16/9) {
   .bg_video {
     width: 100%;
