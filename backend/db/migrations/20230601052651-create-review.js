@@ -21,6 +21,14 @@ module.exports = {
         references: { model: "Customers" },
         onDelete: "CASCADE"
       },
+      firstName: {
+        type: Sequelize.STRING(50),
+        allowNull: true
+      },
+      lastName: {
+        type: Sequelize.STRING(50),
+        allowNull: true
+      },
       description: {
         type: Sequelize.STRING(500),
         allowNull: false

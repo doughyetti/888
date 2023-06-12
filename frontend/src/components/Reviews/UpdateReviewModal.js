@@ -1,10 +1,12 @@
 import React, { useState } from "react";
 import { useDispatch } from "react-redux";
+import { useModal } from "../../context/Modal";
 import * as reviewActions from "../../store/review";
 import "./Reviews.css"
 
 const UpdateReviewModal = (review) => {
   const dispatch = useDispatch();
+  const { closeModal } = useModal();
 
   let { id, description } = review.review;
 
@@ -17,7 +19,7 @@ const UpdateReviewModal = (review) => {
     const review =  { id: id, description: updateDescription }
 
     return dispatch(reviewActions.updateReviewThunk(review))
-      .then(window.location.reload())
+      .then(closeModal())
       .catch(async (res) => {
       const data = await res.json();
 

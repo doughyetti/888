@@ -18,11 +18,22 @@ function SignupFormModal() {
 
   const handleSubmit = (e) => {
     e.preventDefault();
+
+    if (!email.includes("@")) {
+      return setErrors({
+        email: `Email must contain "@"`
+      })
+    };
+    if (password.length < 6) {
+      return setErrors({
+        password: "Password must be 6 or more characters"
+      })
+    };
     if (phoneNumber.length < 10 || phoneNumber.length > 10) {
       return setErrors({
         phoneNumber: "Phone number must be 10 characters long"
       })
-    }
+    };
     if (password === confirmPassword) {
       setErrors({});
       return dispatch(

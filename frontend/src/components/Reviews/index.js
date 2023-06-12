@@ -3,6 +3,7 @@ import { Row, Col } from "reactstrap";
 import { useEffect } from "react";
 import { useDispatch, useSelector } from "react-redux";
 import { getReviewsThunk } from "../../store/review";
+import { useModal } from "../../context/Modal";
 import Slider from "react-slick";
 import OpenReviewsModalBtn from "./ReviewsOpenModalBtn.js";
 import NewReviewModal from "./NewReviewsModal";
@@ -14,6 +15,7 @@ import "./slick.css";
 
 const Reviews = () => {
   const dispatch = useDispatch();
+  const { closeModal } = useModal();
 
   const reviewsArr = useSelector(state => Object.values(state.review));
   const user = useSelector(state =>state.session.user);
@@ -34,7 +36,7 @@ const Reviews = () => {
     if (window.confirm('Are you sure you want to remove this group?')) {
       dispatch(reviewActions.deleteReviewThunk(reviewId))
     }
-    window.location.reload()
+    closeModal();
   };
 
   return (
@@ -51,7 +53,7 @@ const Reviews = () => {
                     <p className="review-content">{review.description}</p>
 
                     <div className="customer-info">
-                      <h6>{review.Customer.firstName} {review.Customer.lastName}</h6>
+                      <h6>{review.firstName} {review.lastName}</h6>
 
                       {user && <div className="customer-edit">
                         <UpdateReviewsModalBtn

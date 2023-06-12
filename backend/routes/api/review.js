@@ -22,6 +22,8 @@ router.post('/', async (req, res) => {
 
   const newReview = await Review.create({
     customerId: req.user.id,
+    firstName: req.user.firstName,
+    lastName: req.user.lastName,
     description
   });
 
