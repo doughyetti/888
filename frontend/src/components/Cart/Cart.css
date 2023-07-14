@@ -93,9 +93,9 @@
 
 .cart-bottom button {
   font-size: 1.5rem;
-  padding: 5px 20px;
+  padding: 15px 25px;
   border: none;
-  border-radius: 5px;
+  border-radius: 50px;
   background-color: transparent;
   color: #fff;
 }
@@ -104,7 +104,7 @@
   cursor: pointer;
   background-color: rgb(255, 255, 255);
   color: black;
-  transition: .5s;
+  transition: 1s ease;
 }
 
 
