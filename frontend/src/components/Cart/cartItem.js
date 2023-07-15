@@ -7,7 +7,7 @@ import "./Cart.css";
 const CartItem = ({ item }) => {
   const dispatch = useDispatch();
 
-  const { id, name, price, quantity, totalPrice } = item;
+  const { id, name, price, quantity, totalPrice, previewPhoto } = item;
 
   const incrementItem = () => {
     dispatch(cartActions.addItem({
@@ -27,6 +27,10 @@ const CartItem = ({ item }) => {
 
   return (
     <ListGroupItem className="list-group-item-wrapper">
+      <div className="cart-item-pic">
+        <img src={previewPhoto} alt="cart-item"></img>
+      </div>
+
       <div className="cart-item-info">
         <div className="cart-item-margins">
 
@@ -60,7 +64,6 @@ const CartItem = ({ item }) => {
       <span className="cart-item-delete-btn">
         <i className="fa-solid fa-xmark" onClick={() => deleteItem(id)}></i>
       </span>
-      
     </ListGroupItem>
   )
 };
