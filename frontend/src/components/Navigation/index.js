@@ -46,7 +46,7 @@ function Navigation({ isLoaded }){
               <li className="menu-item" onClick={handleAboutClick}>ABOUT</li>
               <li className="menu-item" onClick={handleMenuClick} >MENU</li>
               <li className="menu-item" onClick={handleReviewsClick}>REVIEWS</li>
-              <li className="menu-item">RESERVATIONS</li>
+              {/* <li className="menu-item">RESERVATIONS</li> */}
               <li id="order" className="menu-item" onClick={handleMenuClick} >ORDER ONLINE</li>
               <li className="menu-item-cart">
                 <button className="cart-icon"><i className="fa-solid fa-basket-shopping" onClick={toggleCart}></i></button>

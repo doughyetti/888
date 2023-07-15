@@ -18,17 +18,21 @@
 }
 
 .about-us-container {
-  width: 80%;
+  width: 90%;
   display: flex;
   flex-direction: row;
   align-items: center;
   justify-content: space-between;
 }
 
-.about-us-img {
-  width: 65%;
-  height: 65%;
-  border-radius: 30% 70% 70% 30% / 30% 43% 57% 70% ;
+.about-us-vid-border {
+  width: 71%;
+}
+
+.about-vid {
+  position: relative;
+  width: 71%;
+  border-radius: 30% 70% 70% 30% / 30% 43% 57% 70%;
 }
 
 .about-container {
@@ -36,8 +40,8 @@
   align-items: center;
   justify-content: space-between;
   position: absolute;
-  right: 150px;
-  top: 250px;
+  right: 125px;
+  top: 300px;
   width: 40vw;
   height: 50vh;
   background-color: rgb(0,0,0, 0.3);
@@ -65,9 +69,9 @@
 }
 
 @media (max-width: 1920px) {
-  .about-us-img {
-    width: 50%;
-    height: 50%;
+  .about-vid {
+    width: 65%;
+    height: 65%;
   }
   .about-container {
     position: absolute;

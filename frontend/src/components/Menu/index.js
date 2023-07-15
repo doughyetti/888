@@ -21,12 +21,13 @@ const Menu = () => {
   const [menuType, setMenuType] = useState('')
 
   const addToCart = (item) => {
-    const { id, name, price } = item;
+    const { id, name, price, previewPhoto } = item;
 
     dispatch(cartActions.addItem({
       id,
       name,
-      price
+      price,
+      previewPhoto
     }))
   };
 
@@ -69,7 +70,6 @@ const Menu = () => {
       <Container id="menu-section" className="main-container">
         <Row className="menu-container">
           <div className="menu-headers-container">
-
             <div className="menu-list">
               {menuArr.length && menuArr.map((menu) => (
                 <button key={menu.id} className={`filter-btn ${filter === menu.type ? "active-btn" : ""}`} onClick={() => setFilter(menu.type)}>{menu.type}</button>
@@ -77,7 +77,6 @@ const Menu = () => {
             </div>
 
             <Search />
-
           </div>
 
           <div className="items-list-container">
@@ -91,6 +90,10 @@ const Menu = () => {
                 <div className="item-info">
                   <p>{item.description}</p>
                   <button className="add-cart-btn" onClick={() => addToCart(item)}><i className="fa-solid fa-cart-plus"></i></button>
+                </div>
+
+                <div className="item-pic">
+                  <img src={item.previewPhoto} alt="item"></img>
                 </div>
               </div>
             ))}

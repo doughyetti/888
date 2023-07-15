@@ -119,7 +119,7 @@ function SignupFormModal() {
               type="text"
               value={phoneNumber}
               onChange={(e) => setPhoneNumber(e.target.value)}
-              placeholder="Them Digits"
+              placeholder="Phone Number"
               required
             />
 
